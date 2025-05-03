@@ -29,34 +29,32 @@ inline float operation(float n, float m, char op)
 }
 
 
-inline std::pair<std::stack<int>, std::stack<char>> data(char*[] array) //extrait en deux piles distinctes opérateurs et opérandes
+int main(int argc, char* argv[])
 {
     std::stack<int> number_stack;
     std::stack<char> operator_stack;
     
-    for (char elem : array)
+    for (int i; i< argc; i++)
     {
-        if (atoi(elem) == 0 && elem != '0') 
+        if (atoi(argv[i]) == 0)
         {
-            operator_stack.push(elem);
+            operator_stack.push(*argv[i]);
         }
         
         else
         {
-            number_stack.push(atoi(elem));
+            number_stack.push(atoi(argv[i]));
         }
     }
 
-    return std::make_pair(number_stack, operator_stack);
+    while (!number_stack.empty()) {
+        std::cout << number_stack.top() << std::endl;
+        number_stack.pop();  
+    }
 
-}
-
-
-
-int main(int argc, char* argv[])
-{
-    std::cout<< data(argv).first.top() << std::endl;
-
+    
+    
+    
 
     return 0;
 }
