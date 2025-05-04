@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
         std::cout<< atoi(argv[1]) << std::endl;
     }
 
-    std::cout<< "taille debut" << stack_calcul.size() << std::endl;
+    
 
     
    
@@ -51,26 +51,26 @@ int main(int argc, char* argv[])
     stack_calcul.push(atoi(argv[2]));
     int n = 3;
 
-    std::cout<< "top pile debut" << stack_calcul.top()<< std::endl;
+    
 
 
 
-    while (stack_calcul.size() > 1)
+    while (n< argc)
     {
         if (*argv[n] == '+' or *argv[n] == '-' or *argv[n] == 'x' or *argv[n] == '/')
         {
             char op = *argv[n];
             float k = stack_calcul.top();
 
-            std::cout<< "k" << k << std::endl; 
+    
 
             stack_calcul.pop();
             float l = stack_calcul.top();
 
-            std::cout<< "l" << l << std::endl; 
+            
             stack_calcul.pop();
             stack_calcul.push(operation(l, k, op));
-            std::cout<< "k*l" << stack_calcul.top() << std::endl;
+           
 
         }
 
@@ -89,15 +89,13 @@ int main(int argc, char* argv[])
 
         n += 1;
 
-        std::cout<< "taille après une itération" << stack_calcul.size();
+      
         
     
 
     }
 
-    std::cout<< n << std::endl;
-    std::cout<< argc<< std::endl;
-    std::cout<< stack_calcul.size();
+
 
 
     std::cout<< stack_calcul.top() << std::endl;
