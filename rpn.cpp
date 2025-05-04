@@ -42,16 +42,12 @@ int main(int argc, char* argv[])
         std::cout<< atoi(argv[1]) << std::endl;
     }
 
-    
-
-    
-   
-    stack_calcul.push(atoi(argv[1]));
+    else
+    {
+         stack_calcul.push(atoi(argv[1]));
 
     stack_calcul.push(atoi(argv[2]));
     int n = 3;
-
-    
 
 
 
@@ -96,24 +92,10 @@ int main(int argc, char* argv[])
     }
 
 
-
+   
+    }
 
     std::cout<< stack_calcul.top() << std::endl;
-
-
-
-    
- 
-
-
-   
-   
-
-    
-
-    
-    
-    
 
     return 0;
 }
