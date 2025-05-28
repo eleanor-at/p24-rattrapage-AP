@@ -58,8 +58,6 @@ int main(int argc, char* argv[])
             char op = *argv[n];
             float k = stack_calcul.top();
 
-    
-
             stack_calcul.pop();
             float l = stack_calcul.top();
 
@@ -85,13 +83,9 @@ int main(int argc, char* argv[])
 
         n += 1;
 
-      
-        
     
 
     }
-
-
    
     }
 
